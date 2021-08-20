@@ -1,0 +1,83 @@
+
+<div class="splash" *ngIf="showsplash">
+  <div align="center">
+    <img class="animated pulse infinite" style="width: 200px; margin-bottom: -15px" src="assets/icon/logo1.png" />
+    <h4 class="fs-20 logo-text" color="dark">loading Inscribe libraries ...</h4>
+  </div>
+</div>
+
+<ion-app *ngIf="!showsplash">
+  <ion-split-pane contentId="menu-content">
+    <ion-menu class="sidebar" *ngIf="globals?.splitPaneToggle" type="overlay" contentId="menu-content">
+      <ion-header>
+        <ion-toolbar border="none" lines="none">
+          <ion-buttons slot="start">
+            <ion-button clear="true">
+            </ion-button>
+            <!-- <ion-button class="bg-primary" round clear="true">
+              <i class="material-icons">face</i>
+            </ion-button> -->
+          </ion-buttons>
+          <ion-title>
+            Skyforce Movies
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <br />
+        <ion-list>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item color="light" class="bg-warning-overlay" routerLink="/overview" [routerDirection]="'root'" lines="none">
+              <i item-start class="material-icons">store_mall_directory</i>
+              <ion-label>
+                <h2>Overview</h2>
+              </ion-label>
+            </ion-item>
+            <br />
+            <ion-item color="light" [routerDirection]="'root'" routerLink="/movies" lines="none">
+              <i item-start class="material-icons">movie</i>
+              <ion-label>
+                <h2>Movies Collections</h2>
+              </ion-label>
+            </ion-item>
+            <ion-item color="light" [routerDirection]="'root'" routerLink="/series" lines="none">
+              <i item-start class="material-icons">live_tv</i>
+              <ion-label>
+                <h2>Tv Shows Collections</h2>
+              </ion-label>
+            </ion-item>
+            <ion-item color="light" [routerDirection]="'root'" routerLink="/series" lines="none">
+              <i item-start class="material-icons">tv</i>
+              <ion-label>
+                <h2>My Watchlist</h2>
+              </ion-label>
+            </ion-item>
+            <br />
+            <ion-item [routerDirection]="'root'" routerLink="/settings" id="no-icon" lines="none">
+              <ion-label>
+                <h2>Settings</h2>
+              </ion-label>
+            </ion-item>
+            <!-- <ion-item lines="none" id="no-icon">
+              <ion-label>
+                <h2>Terms & Condition</h2>
+              </ion-label>
+            </ion-item>
+            <ion-item lines="none" id="no-icon">
+              <ion-label>
+                <h2>Frequently Asked Question</h2>
+              </ion-label>
+            </ion-item> -->
+            <ion-item lines="none" id="no-icon" (click)="logout()">
+              <ion-label>
+                <h2>Logout</h2>
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="menu-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

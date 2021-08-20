@@ -1,0 +1,20 @@
+:host {
+    .validation-errors {
+        margin-left: 10px !important;
+        font-size: 12px !important;
+        color: red !important;
+    }
+    ion-button {
+        margin-left: 10px !important;
+        span{
+          text-align:left;
+          width:100%;
+        }
+        i {
+            text-align: right;
+        }
+    }
+    // ion-item {
+    //     margin-bottom: 5px !important;
+    // }
+}

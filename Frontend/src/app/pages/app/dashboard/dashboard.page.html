@@ -1,0 +1,66 @@
+<ion-content>
+<ion-header no-border>
+
+  <div class="header">
+    <h3 class="header-text">Welcome.
+      Millions of movies, TV shows and people to discover. Explore now.</h3>
+    
+
+    <ion-searchbar showCancelButton="focus" (click)="onSearch()"></ion-searchbar>
+
+  </div>
+  <ion-toolbar>
+    <ion-title>Overview</ion-title>
+    <img src="" alt="">
+    
+    <!-- <ion-buttons slot="end">
+      <ion-button (click)="onSearch()">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+
+<div class="ion-padding">
+  <div class="hidden-md">
+    <movies-scroll [type]="'now_playing'" [slideCount]="1.5"></movies-scroll>
+    <h2 class="fs-16">Upcoming Movie & Tv Show</h2>
+    <movies-scroll [type]="'upcoming'" ></movies-scroll>
+    <br/>
+    <movies-scroll [type]="'on_the_air'" [collection]="'series'"></movies-scroll>
+
+    <h2 class="fs-16">Popular Movies & Tv Shows</h2>
+    <movies-scroll [type]="'popular'"></movies-scroll>
+    <br/>
+    <movies-scroll [type]="'popular'" [collection]="'series'"></movies-scroll>
+
+    <h2 class="fs-16">Top Rated Movies & Tv Shows</h2>
+    <movies-scroll [type]="'top_rated'"></movies-scroll>
+    <br/>
+    <movies-scroll [type]="'top_rated'" [collection]="'series'"></movies-scroll>
+  </div>
+  <div class="hidden-xs">
+    <movies-scroll [type]="'now_playing'" [slideCount]="4.5"></movies-scroll>
+    <h2 class="fs-16">Upcoming Movies & Tv Shows</h2>
+   <div>    
+    <movies-scroll [type]="'upcoming'" [slideCount]="5.5"></movies-scroll>
+   </div>
+
+    <br/>
+    <movies-boxes [type]="'on_the_air'" [collection]="'series'"></movies-boxes>
+
+    <h2 class="fs-16">Popular Movies & Tv Shows</h2>
+    <movies-scroll [type]="'popular'" [slideCount]="5.5"></movies-scroll>
+    <br/>
+    <movies-boxes [type]="'popular'" [collection]="'series'"></movies-boxes>
+
+    <h2 class="fs-16">Top Rated Movies & Tv Shows</h2>
+    <movies-scroll [type]="'top_rated'" [slideCount]="5.5"></movies-scroll>
+    <br/>
+    <movies-boxes [type]="'top_rated'" [collection]="'series'"></movies-boxes>
+  </div>
+
+</div>
+
+</ion-content>

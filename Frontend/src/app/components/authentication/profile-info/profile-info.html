@@ -1,0 +1,51 @@
+<form [formGroup]="validations_form" role="form" (ngSubmit)="saveProfile(validations_form.value)" class="form">
+  <input accept="image/*" (change)="onFileChange($event)" type="file" class="hidden" id="profile-image" />
+  <!-- <ion-list> -->
+  <ion-item lines="none" (click)="openImage()" no-border>
+    <ion-thumbnail slot="start">
+      <img height="80px" width="80px" *ngIf="!validations_form?.controls?.photoURL?.value" src="assets/icon/avatar-372-456324.png">
+      <img height="80px" width="80px" *ngIf="validations_form?.controls?.photoURL?.value" src="{{validations_form?.controls?.photoURL?.value }}">
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{validations_form?.controls?.displayName?.value || 'John Doe'}}</h2>
+      <p>{{validations_form?.controls?.email?.value || 'test@ecample.com'}}</p>
+    </ion-label>
+  </ion-item>
+  <ion-list-header lines="none" color="light">Personal Information</ion-list-header>
+  <ion-row>
+    <ion-col size="12">
+      <ion-item lines="none">
+        <ion-label position="stacked" color="dark">Username <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input formControlName="username" type="text"></ion-input>
+      </ion-item>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.displayName">
+          <div class="error-message"
+            *ngIf="validations_form.get('username').hasError(validation.type) && (validations_form.get('username').dirty || validations_form.get('username').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <br />
+  <ion-list-header lines="none" color="light">User Contact Info</ion-list-header>
+  <ion-row>
+    <ion-col size="12">
+      <ion-item lines="none">
+        <ion-label position="stacked" color="dark">Email <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input disabled formControlName="email" type="email" ></ion-input>
+      </ion-item>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.email">
+          <div class="error-message"
+            *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-button type="submit" class="hidden profile" [disabled]="!validations_form.valid">Register</ion-button>
+</form>

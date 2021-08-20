@@ -1,0 +1,28 @@
+<ion-content fullscreen class="no-padding">
+  <ion-toolbar class="image-preview-toolbar" lines="none">
+    <ion-buttons slot="start">
+      <ion-button (click)="closePage()" fill="clear" color="light">
+        <ion-icon class="fs-40" name="close" slot="start"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="zoom(true)" fill="clear" color="light">
+        <ion-icon name="add" slot="start"></ion-icon>
+        <!-- in -->
+      </ion-button>
+      <ion-button (click)="zoom(false)" fill="clear" color="light">
+        <ion-icon name="remove" slot="start"></ion-icon>
+        <!-- out -->
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-slides #sliderRef [options]="sliderOptions">
+    <ion-slide>
+      <div class="swiper-zoom-container">
+        <img [src]="img" />
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

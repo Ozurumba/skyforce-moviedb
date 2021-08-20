@@ -1,0 +1,18 @@
+no-content {
+    #center
+    {
+        margin: 9vh auto !important;
+        img {
+            filter: grayscale(100%) !important;
+            opacity: 50% !important;
+        }
+        p {
+            width: 250px !important;
+            // font-size: 20px !important;
+            margin-top: 0px !important; 
+            color: #999 !important;
+            z-index: 9999 !important;
+        }
+    }
+    
+}

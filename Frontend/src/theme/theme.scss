@@ -1,0 +1,216 @@
+
+.ion-color-ink {
+    --ion-color-base: var(--ion-color-ink) !important;
+    --ion-color-base-rgb: var(--ion-color-ink-rgb) !important;
+    --ion-color-contrast: var(--ion-color-ink-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-ink-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-ink-shade) !important;
+    --ion-color-tint: var(--ion-color-ink-tint) !important;
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+}
+
+hr, hr * {
+    background: #ccc !important;
+    // height: 0.5px !important;
+}
+.visible-md {
+    display: none !important;
+}
+
+body {
+    -webkit-user-select: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+}
+.h-100 {
+    height: 100vh !important;
+}
+.text-capitalize{
+    text-transform: capitalize !important;
+}
+.fs-12 {
+    font-size: 12px !important;
+}
+.fs-14 {
+    font-size: 14px !important;
+}
+.fs-16 {
+    font-size: 16px !important;
+}
+.fs-18 {
+    font-size: 18px !important;
+}
+.fs-20 {
+    font-size: 20px !important;
+}
+.fs-22 {
+    font-size: 22px !important;
+}
+.text-muted {
+    color: #aaa !important;
+}
+.text-success {
+    color: --ion-color-secondary !important;
+}
+.text-darkgray {
+    color:  --ion-color-dark !important;
+}
+.bold {
+    font-weight: 600 !important;
+}
+.b-b {
+    border-bottom: 1px solid --ion-color-light !important;
+}
+.title-md {
+    padding-left: -10px !important;
+}
+.no-padding {
+    padding: 0px !important;
+}
+.no-shadow {
+    box-shadow: none !important;
+}
+.text-capitalize{
+    text-transform: capitalize !important;
+}
+.hidden {
+    display: none !important;
+}
+.bold
+{
+    font-weight: 600 !important;
+}
+.fs-18
+{
+    font-size: 18px !important;
+}
+.fs-40
+{
+    font-size: 40px !important;
+}
+.fs-30
+{
+    font-size: 30px !important;
+}
+.fs-20
+{
+    font-size: 20px !important;
+}
+.fs-25
+{
+    font-size: 25px !important;
+}
+.fs-12
+{
+    font-size: 12px !important;
+}
+.fs-10
+{
+    font-size: 10px !important;
+}
+.fs-14
+{
+    font-size: 14px !important;
+}
+.fs-16
+{
+    font-size: 16px !important;
+}
+.h-100 {
+    height: 100vh !important;
+}
+.b-b {
+    border-bottom: 1px solid #ddd !important;
+}
+.bl-blue {
+    border-left: 2.5px solid --ion-color-primary !important;
+}
+.bl-secondary {
+    border-left: 2.5px solid --ion-color-success !important;
+}
+.bl-warning {
+    border-left: 2.5px solid --ion-color-warning !important;
+}
+.bl-danger {
+    border-left: 2.5px solid --ion-color-danger !important;
+}
+.bg-darkgray, .bg-darkgray * {
+    --background: --ion-color-dark !important;
+}
+.bg-primary, .bg-primary * {
+    --background:  --ion-color-primary !important;
+}
+.bg-secondary, .bg-secondary * {
+    --background: --ion-color-success !important;
+}
+.bg-warning, .bg-warning * {
+    --background: --ion-color-warning !important;
+}
+.bg-danger, .bg-danger * {
+    --background: --ion-color-danger !important;
+}
+.bg-white, .bg-white * {
+    --background: --ion-color-white !important;
+}
+.bg-red-overlay, .bg-red-overlay * {
+    --background: #fce8e6 !important;
+    color: #d93025;
+}
+.bg-primary-overlay, .bg-primary-overlay * {
+    --background: #e8f0fe !important;
+    color: #4285f4 !important;
+}
+.bg-green-overlay, .bg-green-overlay * {
+    --background: #e8f0f0 !important;
+    color: #42f4a1 !important;
+}
+.bg-light-overlay, .bg-light-overlay * {
+    --background: #eee !important;
+    color: #999 !important;
+}
+.text-dark {
+    color: --ion-color-dark !important;
+}
+.text-white {
+    color: --ion-color-white !important;
+}
+* ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none !important;
+}
+.toast-secondary {
+> div{
+        --background: --ion-color-success !important;
+    }
+}
+.toast-error {
+> div{
+        --background: --ion-color-danger !important;
+    }
+}
+ion-list-header {
+    font-size: 14px !important;
+}
+ion-card[fullscreen] {
+    width: 100% !important;
+    margin: 0px !important;
+}
+.flip {
+    transform: rotateY(190deg) !important;
+}

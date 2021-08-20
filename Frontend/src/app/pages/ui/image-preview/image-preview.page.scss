@@ -1,0 +1,20 @@
+
+:host {
+    .image-preview-toolbar {
+        --background: transparent;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        margin-left: -5px !important;
+    }
+    ion-content {
+        --background: rgba(0, 0, 0, 0.84);
+        min-height: 100vh !important;
+    }
+    .footer {
+        --background: transparent;
+        margin-top: 10px;
+    }
+    ion-slides {
+        height: 80%;
+    }
+}

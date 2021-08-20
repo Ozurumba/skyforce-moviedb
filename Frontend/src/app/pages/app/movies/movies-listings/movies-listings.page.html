@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{title}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="globals?.navigate('search')">
+        <ion-icon color="warning" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar no-border lines="none" placeholder="search for a {{title}}"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="no-padding">
+  <movies-boxes class="zoom" [type]="(type == 'series') ? 'on_the_air' : 'upcoming'" class="hidden-md" [collection]="type"></movies-boxes>
+  <div class="hidden-xs">
+    <movies-boxes [type]="(type == 'series') ? 'on_the_air' : 'upcoming'" [collection]="type"></movies-boxes>
+  </div>
+  <div class="hidden-xs">
+    <h2 class="fs-16" style="margin-left: 15px;">Upcoming {{title}}</h2>
+    <movies-boxes [type]="(type == 'series') ? 'top_rated' : 'top_rated'" [collection]="type"></movies-boxes>
+  </div>
+  <div class="hidden-xs">
+    <h2 class="fs-16" style="margin-left: 15px;">Popular {{title}}</h2>
+    <movies-boxes [type]="(type == 'series') ? 'popular' : 'popular'" [collection]="type"></movies-boxes>
+  </div>
+</ion-content>

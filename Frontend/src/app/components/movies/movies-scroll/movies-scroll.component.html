@@ -1,0 +1,31 @@
+<ion-slides [options]="sliderOpts" *ngIf="!loader && movies?.length > 1">
+  <ion-slide id="backgroundz" class="movie" *ngFor="let movie of movies; let i = index" (click)="onMovieDetail(movie.id)">
+    <div>
+      <div class="poster">
+        <img-loader [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" useImg></img-loader>
+        <!-- <img *ngIf="movie.poster_path" class="poster-effect" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"> -->
+      </div>
+      <!-- <h3 style="margin-top: 0px" *ngIf="slideCount != 0" class="bold fs-14" align="left">{{ globals.cutString(movie?.title, 15) || globals.cutString(movie?.name, 15) }}</h3> -->
+    </div>
+  </ion-slide>
+  <ion-slide>
+    <!-- <div>
+
+      <ion-button color="warning"><h3 (click)="onNextPage()">Load More</h3></ion-button>
+      
+    </div> -->
+  </ion-slide>
+</ion-slides>
+
+<div class="content-fullscreen-message" *ngIf="movies && movies.length == 0">
+  An error has occurred, no movies were found
+</div>
+
+<ion-slides [options]="sliderOpts" *ngIf="loader">
+  <ion-slide *ngFor="let i of [0,1,2,3,4,5,6,7,8]">
+    <div>
+      <ion-skeleton-text animated style="width: 80px; height: 80px"></ion-skeleton-text>
+      <!-- <ion-skeleton-text animated style="width: 60px;height: 14px"></ion-skeleton-text> -->
+    </div>
+  </ion-slide>
+</ion-slides>

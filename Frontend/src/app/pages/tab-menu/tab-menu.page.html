@@ -1,0 +1,25 @@
+
+    <ion-tabs>
+      <ion-tab-bar mode="md" slot="bottom" *ngIf="hideTabs">
+        <ion-tab-button tab="dashboard" [layout]="tabsLayout">
+          <!-- <i item-start class="material-icons">store_mall_directory</i> -->
+          <ion-icon name="flame"></ion-icon>
+          <ion-label>Overview</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="movies" [layout]="tabsLayout">
+          <i item-start class="material-icons">movie</i>
+          <ion-label>Movies</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="series" [layout]="tabsLayout">
+          <i item-start class="material-icons">live_tv</i>
+          <ion-label>Tv Shows</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="settings" [layout]="tabsLayout">
+          <ion-icon name="settings"></ion-icon>
+          <ion-label>Settings</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>

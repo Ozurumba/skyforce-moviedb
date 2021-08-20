@@ -1,0 +1,123 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+@import './theme/dark';
+@import './theme/theme';
+
+@media only screen and (max-width: 600px) {
+    .split-pane-md.split-pane-visible > .split-pane-side {
+        max-width: 250px;
+        min-width: 240px;
+    }
+    [hidden], .hidden-md {
+        display: block !important;
+    }
+    .hidden-xs, .hidden {
+        display: none !important;
+    }
+    .sidebar {
+        --max-width: 250px;
+        * {
+            --background: #ccc !important;
+        }
+        ion-toolbar {
+            ion-item {
+                margin-top: 20px;
+            }
+        }
+        i {
+            margin-right: 17px !important;;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    ion-header {
+        --border-style: none;
+    }
+    [hidden], .hidden-xs {
+        display: block !important;
+    }
+    .hidden-md, .hidden {
+        display: none !important;
+    }
+    .toolbar-md {
+        min-height: 50px;
+    }
+    button[menuToggle] {
+        margin-left: 16px;
+    }
+    .split-pane-md.split-pane-visible > .split-pane-side {
+        max-width: 20%;
+        min-width: 227px;
+    }
+    .sidebar { 
+        // padding-left: 100px;
+        border: 0px !important;
+        ion-header {
+            ion-buttons {
+                margin-left: 20px;
+            }
+            ion-title {
+                margin-left: -15px;
+            }
+        }
+        ion-content {
+            // --background: #fffffe !important;
+            hr {
+                margin-left: -10px;
+                width: 95%;
+                --background: #ccc !important;
+            }
+            ion-item#no-icon {
+                padding-left: 10px;
+            }
+            ion-item {
+                width: 90%;
+                min-height: 37px;
+                max-height: 37px;
+                margin-bottom: 5px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                i, ion-icon {
+                    font-size: 17px;
+                    margin-right: 15px;
+                    margin-top: 0px;
+                    padding-left: 10px;
+                }
+                i {
+                    position: relative;
+                    top: -6px;
+                }
+                ion-label {
+                    margin-top: -2.5px !important;
+                    h2 {
+                        // font-weight: 550;
+                        text-shadow: none;
+                        text-transform: capitalize;
+                        font-size: 14px;
+                    }
+                }
+                ion-badge {
+                    position: relative;
+                    top: -5px;
+                }
+                .bg-* {
+                    font-weight: 600;
+                }
+                // * {
+                //     --background: #000 !important;
+                //     // color: color($colors, darkgray) !important;
+                // }
+            }
+        }
+    }
+}

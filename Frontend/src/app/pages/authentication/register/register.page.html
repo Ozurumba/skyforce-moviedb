@@ -1,0 +1,35 @@
+<ion-header no-border lines="none">
+  <ion-toolbar color="white" mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button text="" class="hidden-md" color="dark" mode="md" icon="md-arrow-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="4" offset-md="4" offset-sm="3" size-sm="6" color="dark" size="12">
+        <div class="hidden-xs">
+          <br />
+          <br />
+        </div>
+        <ion-item lines="none">
+          <ion-label>
+            <h2 color="dark" class="fs-20">Create Your Account</h2>
+            <p class="fs-14"class="ion-text-wrap">complete form to create your account</p>
+          </ion-label>
+        </ion-item>
+        <register-form></register-form>
+        <br />
+        <ion-item lines="none">
+          <ion-label>
+            <p class="fs-14" class="ion-text-wrap"><span routerLink="/login" color="primary">Already have an account? Try to Log In.</span></p>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size-md="8" size-sm="7" class="visible-md h-100">
+        <div> 2 of 3 </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

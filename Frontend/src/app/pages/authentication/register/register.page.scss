@@ -1,0 +1,10 @@
+:host {
+    ion-header {
+        ion-toolbar {
+            margin-top: 10px !important;
+        }
+    }
+    ion-content {
+        --overflow: hidden !important;
+    }
+}

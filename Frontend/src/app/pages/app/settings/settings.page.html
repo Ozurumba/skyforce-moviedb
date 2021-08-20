@@ -1,0 +1,64 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <!-- <ion-buttons slot="start">
+      <ion-menu-button>
+        <i color="dark" class="material-icons">subject</i>
+      </ion-menu-button>
+    </ion-buttons> -->
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div align="center">
+    <br />
+    <br />
+    <img height="80px" width="80px" src="{{globals?.userData?.photoURL || 'assets/icon/avatar-372-456324.png' }}">
+    <br />
+    <br />
+  </div>
+  <ion-list-header class="fs-14">Personal Information</ion-list-header>
+  <ion-item (click)="globals.navigate('app/profile', true)">
+    <ion-avatar color="primary" class="bg-primary text-white" slot="start">
+      <i item-start class="material-icons">account_circle</i>
+    </ion-avatar>
+    <ion-label>
+      <h2>Profile</h2>
+    </ion-label>
+  </ion-item>
+
+  <ion-list-header class="fs-14">
+    Payment Information
+  </ion-list-header>
+  <ion-item (click)="globals.navigate('payments/donate', true)">
+    <ion-avatar color="primary" class="bg-primary text-white" slot="start">
+      <i item-start class="material-icons">card_giftcard</i>
+    </ion-avatar>
+    <ion-label>
+      <h2>Donate Now</h2>
+    </ion-label>
+  </ion-item>
+  <ion-item (click)="globals.navigate('payments/methods', true)">
+    <ion-avatar color="primary" class="bg-primary text-white" slot="start">
+      <i item-start class="material-icons">credit_card</i>
+    </ion-avatar>
+    <ion-label>
+      <h2>Payment Methods</h2>
+    </ion-label>
+  </ion-item>
+
+  <ion-list-header class="fs-14">Authentication Information
+  </ion-list-header>
+  <ion-item lines="none" (click)="globals?.navigate('forgot', true)">
+    <ion-avatar color="primary" class="bg-primary text-white" slot="start">
+      <i item-start class="material-icons">lock</i>
+    </ion-avatar>
+    <h2 class="fs-16">Change Password</h2>
+  </ion-item>
+  <br />
+  <br />
+  <h6 class="fs-14 text-muted" align="center">Copyright By Skyforce Technologies</h6>
+  <br />
+  <br />
+  <br />
+</ion-content>
