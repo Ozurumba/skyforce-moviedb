@@ -3,7 +3,7 @@
     <div>
       <div class="poster">
         <img-loader [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" useImg></img-loader>
-        <img *ngIf="movie.poster_path" class="poster-effect" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path">
+        <!-- <img *ngIf="movie.poster_path" class="poster-effect" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"> -->
       </div>
       <!-- <h3 style="margin-top: 0px" *ngIf="slideCount != 0" class="bold fs-14" align="left">{{ globals.cutString(movie?.title, 15) || globals.cutString(movie?.name, 15) }}</h3> -->
     </div>
