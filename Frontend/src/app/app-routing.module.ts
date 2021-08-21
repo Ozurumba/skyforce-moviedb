@@ -37,6 +37,11 @@ const routes: Routes = [
     loadChildren: './pages/app/movies/movies-listings/movies-listings.module#MoviesListingsPageModule',
     canActivate: [AuthGuard], 
   },
+  {
+    path: 'watchlist',
+    loadChildren: './pages/app/movies/movies-listings/movies-listings.module#MoviesListingsPageModule',
+    canActivate: [AuthGuard], 
+  },
   { 
     path: 'movies/:id', 
     loadChildren: './pages/app/movies/movies-details/movies-details.module#MoviesDetailsPageModule',
@@ -44,6 +49,11 @@ const routes: Routes = [
   },
   { 
     path: 'series/:id', 
+    loadChildren: './pages/app/movies/movies-details/movies-details.module#MoviesDetailsPageModule' ,
+    canActivate: [AuthGuard], 
+  },
+  { 
+    path: 'watchlist/:id', 
     loadChildren: './pages/app/movies/movies-details/movies-details.module#MoviesDetailsPageModule' ,
     canActivate: [AuthGuard], 
   },

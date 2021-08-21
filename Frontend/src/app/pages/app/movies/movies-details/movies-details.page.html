@@ -72,6 +72,11 @@
               <img *ngIf="company.logo_path" [src]="'https://image.tmdb.org/t/p/w200' + company.logo_path">
             </div>
           </div>
+
+          <div class="load-button" >
+            <ion-button color="warning"><h3 (click)="onNextPage()">Add Movie To Watchlist</h3></ion-button>
+            
+          </div>
       
         </div>
       </ion-col>

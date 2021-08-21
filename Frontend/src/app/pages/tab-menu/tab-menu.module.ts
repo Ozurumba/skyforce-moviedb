@@ -39,12 +39,25 @@ const routes: Routes = [
           }
         ]
       },
+      {
+        path: 'watchlist',
+        children: [
+          {
+            path: '',
+            loadChildren: '../app/movies/movies-listings/movies-listings.module#MoviesListingsPageModule'
+          }
+        ]
+      },
       { 
         path: 'movies/:id', 
         loadChildren: '../app/movies/movies-details/movies-details.module#MoviesDetailsPageModule' 
       },
       { 
         path: 'series/:id', 
+        loadChildren: '../app/movies/movies-details/movies-details.module#MoviesDetailsPageModule' 
+      },
+      { 
+        path: 'watchlist/:id', 
         loadChildren: '../app/movies/movies-details/movies-details.module#MoviesDetailsPageModule' 
       },
       {
