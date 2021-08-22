@@ -30,7 +30,7 @@
         </div>
         <div class="movie-data" *ngIf="movie">
           <div class="title">{{ movie.title || movie.name }}</div>
-          <div class="year">{{ movie.release_date | date:'yyyy' }}</div>
+          <div class="year">{{ movie.release_date | date:'EEEE d MMMM y' }}</div>
           <div class="vote">
             <div class="text">
               <b>{{ movie.vote_average }}</b>/10
@@ -74,7 +74,7 @@
           </div>
 
           <div class="load-button" >
-            <ion-button color="warning"><h3 (click)="onNextPage()">Add Movie To Watchlist</h3></ion-button>
+            <ion-button color="warning"><h4 (click)="onNextPage()"><ion-icon name="bookmark"></ion-icon> Add Movie To Watchlist</h4></ion-button>
             
           </div>
       
