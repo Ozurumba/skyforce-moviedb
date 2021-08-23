@@ -10,8 +10,8 @@ export class TmdbService {
 
   private readonly baseUrl = 'https://api.themoviedb.org/3';
   private readonly params = {
-    api_key: '01eccc8f525522a52f32771024aec40d',
-    // api_key: '54f328a5af7810d70d6797009e225fe4',
+    // api_key: '01eccc8f525522a52f32771024aec40d',
+    api_key: '54f328a5af7810d70d6797009e225fe4',
     language: 'en-US'
   };
 
