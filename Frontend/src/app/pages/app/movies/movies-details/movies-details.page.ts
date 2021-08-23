@@ -17,6 +17,7 @@ export class MoviesDetailsPage implements OnInit {
   type: string = (this.globals.router.url.split('/')[1] !== 'movies') ? 'tv' : 'movie' ;
   title: string = (this.globals.router.url.split('/')[1] !== 'movies') ? 'tv shows' : 'movies' ;
   showToolbar = false;
+  results: Object;
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
@@ -49,6 +50,20 @@ export class MoviesDetailsPage implements OnInit {
 
   onPersonDetail(id: number) {
     this.router.navigate(['person-detail', id]);
+  }
+
+  // Function to add to watch list
+  addToWatchList(item: any) {
+    let body = {
+      ...item,
+      userId: this.globals.userData.uid
+    }
+    this.tmdb.addToWatchList(body).subscribe(res => {
+      this.results = res;
+      this.globals.toastAlert("Added to watch list", {
+        cssClass: 'toast-default'
+      })
+    });
   }
 
 }

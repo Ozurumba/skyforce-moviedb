@@ -55,6 +55,10 @@
             <div class="label"><ion-icon name="md-pricetag"></ion-icon>Genres</div>
             <div class="value"><span *ngFor="let genre of movie.genres; let last = last">{{ genre.name }}<span *ngIf="!last">, </span></span></div>
           </div>
+
+          <ion-button  mode="ios" color="dark" fill="outline" (click)="addToWatchList(movie)" expand="block" type="ion-button">
+            <span>Add to Watchlist</span>
+          </ion-button>
       
           <div class="cast" *ngIf="movie && movie.credits && movie.credits.cast && movie.credits.cast.length">
             <div class="label"><ion-icon name="md-people"></ion-icon>Cast</div>
@@ -68,15 +72,11 @@
           </div>
       
           <div class="companies" *ngIf="movie && movie.production_companies && movie.production_companies.length > 0">
-            <!-- <div class="company" *ngFor="let company of movie.production_companies">
+            <div class="company" *ngFor="let company of movie.production_companies">
               <img *ngIf="company.logo_path" [src]="'https://image.tmdb.org/t/p/w200' + company.logo_path">
-            </div> -->
+            </div>
           </div>
 
-          <div class="load-button" >
-            <ion-button color="warning"><h4 (click)="onNextPage()"><ion-icon name="bookmark"></ion-icon> Add Movie To Watchlist</h4></ion-button>
-            
-          </div>
 
            <!-- Section for video review list start -->
            <div class="new-review">

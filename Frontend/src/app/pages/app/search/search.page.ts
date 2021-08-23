@@ -10,7 +10,7 @@ import { TmdbService } from 'src/app/providers/features/tmdb.service';
 })
 export class SearchPage {
 
-  searchType: 'movies' | 'persons' = 'movies';
+  searchType: 'movies';
   searchInput = '';
   results: Movie[];
 
@@ -20,7 +20,8 @@ export class SearchPage {
   ) {}
 
   onInput(event: any) {
-    this.performSearchMovies(this.searchInput);
+    // console.log(event.target.value, );
+    this.performSearchMovies(event.target.value);
   }
 
   onClear(event: any) {
@@ -37,8 +38,9 @@ export class SearchPage {
   }
 
   private performSearchMovies(query: string) {
-    this.tmdb.searchMovies(query, this.searchType).subscribe(res => {
+    this.tmdb.searchMovies(query).subscribe(res => {
       this.results = res;
+      console.log('This is the result', this.results);
     });
   }
 

@@ -30,33 +30,25 @@ const routes: Routes = [
   {
     path: 'movies',
     loadChildren: './pages/app/movies/movies-listings/movies-listings.module#MoviesListingsPageModule',
-    canActivate: [AuthGuard], 
+    // canActivate: [AuthGuard], 
   },
   {
     path: 'series',
     loadChildren: './pages/app/movies/movies-listings/movies-listings.module#MoviesListingsPageModule',
-    canActivate: [AuthGuard], 
+    // canActivate: [AuthGuard], 
   },
-  {
-    path: 'watchlist',
-    loadChildren: './pages/app/movies/movies-listings/movies-listings.module#MoviesListingsPageModule',
-    canActivate: [AuthGuard], 
-  },
+ 
   { 
     path: 'movies/:id', 
     loadChildren: './pages/app/movies/movies-details/movies-details.module#MoviesDetailsPageModule',
-    canActivate: [AuthGuard],  
+    // canActivate: [AuthGuard],  
   },
   { 
     path: 'series/:id', 
     loadChildren: './pages/app/movies/movies-details/movies-details.module#MoviesDetailsPageModule' ,
-    canActivate: [AuthGuard], 
+    // canActivate: [AuthGuard], 
   },
-  { 
-    path: 'watchlist/:id', 
-    loadChildren: './pages/app/movies/movies-details/movies-details.module#MoviesDetailsPageModule' ,
-    canActivate: [AuthGuard], 
-  },
+  
   {
     path: 'signup', 
     loadChildren: './pages/authentication/register/register.module#RegisterPageModule',
@@ -73,7 +65,11 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: './pages/app/settings/settings.module#SettingsPageModule',
     canActivate: [AuthGuard], 
-  }
+  },
+  { 
+    path: 'watchlist', 
+    loadChildren: './pages/app/watchlist/watchlist.module#WatchlistModule'
+  },
 ];
 
 @NgModule({
