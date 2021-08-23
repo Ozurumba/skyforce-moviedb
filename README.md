@@ -23,6 +23,7 @@ It's a nice app for movie browsing developed by me in order to practice the use 
  
  <img src="https://res.cloudinary.com/dpsujx7rk/image/upload/v1629732364/Screenshot_from_2021-08-23_16-25-33_phsybx.png">
  
+ ### Review
  
  <img src="https://res.cloudinary.com/dpsujx7rk/image/upload/v1629732362/Screenshot_from_2021-08-23_16-25-37_pzzfiw.png">
 
