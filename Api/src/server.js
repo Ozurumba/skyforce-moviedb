@@ -8,7 +8,7 @@ import router from "./middleware/router";
 import logger from "./config/error-log";
 
 
-const port = process.env.PORT || 3200;
+const port = process.env.PORT || 3000;
 
 const app = express();
 
