@@ -28,3 +28,6 @@ It's a nice app for movie browsing developed by me in order to practice the use 
  <img src="https://res.cloudinary.com/dpsujx7rk/image/upload/v1629732362/Screenshot_from_2021-08-23_16-25-37_pzzfiw.png">
 
  <a href="https://documenter.getpostman.com/view/2525985/TzzDHuHa">API Documentaion </a>
+ 
+ 
+ <a href="https://github.com/Ozurumba/grupa-api">Re-hosted API Repo </a>
