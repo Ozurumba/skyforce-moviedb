@@ -21,7 +21,7 @@ const routes: Routes = [
   {
     path: 'welcome', 
     loadChildren: './pages/app/welcome/welcome.module#WelcomePageModule',
-    // canActivate: [AuthGuard], 
+    canActivate: [AuthGuard], 
   },
   { 
     path: 'search', 
@@ -30,23 +30,23 @@ const routes: Routes = [
   {
     path: 'movies',
     loadChildren: './pages/app/movies/movies-listings/movies-listings.module#MoviesListingsPageModule',
-    // canActivate: [AuthGuard], 
+    canActivate: [AuthGuard], 
   },
   {
     path: 'series',
     loadChildren: './pages/app/movies/movies-listings/movies-listings.module#MoviesListingsPageModule',
-    // canActivate: [AuthGuard], 
+    canActivate: [AuthGuard], 
   },
  
   { 
     path: 'movies/:id', 
     loadChildren: './pages/app/movies/movies-details/movies-details.module#MoviesDetailsPageModule',
-    // canActivate: [AuthGuard],  
+    canActivate: [AuthGuard],  
   },
   { 
     path: 'series/:id', 
     loadChildren: './pages/app/movies/movies-details/movies-details.module#MoviesDetailsPageModule' ,
-    // canActivate: [AuthGuard], 
+    canActivate: [AuthGuard], 
   },
   
   {
